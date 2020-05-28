@@ -7,7 +7,8 @@ export class Input extends Component {
     
         this.state = {
              NewItem:"",
-             list:[]
+             list:[],
+            file:""
         }
     }
     change=(event)=>{
@@ -20,6 +21,7 @@ export class Input extends Component {
         const NewItem={
             id:1+Math.random(),
             value:this.state.NewItem
+            file:this.state.file
         }
         const list=[...this.state.list]
         list.push(NewItem)
@@ -27,10 +29,16 @@ export class Input extends Component {
         
         this.setState({
             NewItem:"",
-            list:list
+            list:list,
+            file:""
         })
     }
-    delete=(e)=>{
+    filee=>()
+    delete=(event)=>{
+    this.setState({
+      file:event.target.value
+    })
+    }
         const list=[...this.state.list]
         const ulist=list.filter(i=>i.id!==e)
         this.setState({
@@ -48,6 +56,10 @@ export class Input extends Component {
                 value={this.state.NewItem}
                 onChange={this.change}
                 />
+                <input 
+                 type="file"
+                 onChange={this.filee}
+                 />
                 <button onClick={this.set}>Add</button>
                 </div>
                 <div>
@@ -56,6 +68,9 @@ export class Input extends Component {
                            this.state.list.map(item=>{
                                return(
                                   <div className="output-area">
+                                      <div key={item.id}>
+                                      {item.file}
+                                      </div>
                                        <li key={item.id}>
                                    <input type="checkbox" />
                                    {item.value}
