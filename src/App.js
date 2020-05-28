@@ -22,6 +22,8 @@ function App(){
          <h1 style={style1}>To-Do list </h1>
          <h3 style={style2}>by Suman Das (sumandasddm@gmail.com)</h3>
          <Input />
+         <input type="file"
+         />
     </div>
   )
 }
