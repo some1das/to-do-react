@@ -1,0 +1,61 @@
+body{
+    background-image: linear-gradient(to right,rgb(18, 174, 189),rgb(22, 221, 105));
+}
+.full{
+  height: auto;
+  width: 90vw;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: auto;
+  
+}
+.ip1 input{
+    height: 22px;
+    width: 70vw;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+.ip1 button{
+    height: 37px;
+    width: 14vw;
+    border-radius: 8px;
+    background-color: green;
+    color: white;
+    
+}
+.full ul{
+    
+    height: auto;
+}
+.full li{
+    width: 100%;
+    font-size: 20px;
+    color:rgb(20, 93, 5);
+    list-style: none;
+    border: 2px solid gold;
+    background-color: yellow;
+    border-radius: 10px;
+   
+    float: left;
+}
+.full li button{
+    position: relative;
+    float: right;
+    background-color: tomato;
+}
+.full ul button{
+    background-color: tomato;
+    color: white;
+    font-size: unset;
+    border-radius: 8px;
+}
+.full li input{
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    color: turquoise;
+    
+}
